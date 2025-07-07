@@ -1,0 +1,22 @@
+<div>
+    <div class='mb-4'>
+        <form action='{{ url_for('generate_password') }}' method='post' class='flex'>
+            <input type='text' name='length' placeholder='Enter password length' required>
+            <button type='submit'>Generate Password</button>
+        </form>
+    </div>
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class='p-2 mb text-white {{ 'bg-red-500' if category == 'error' else 'bg-green-500' }}'>
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <div>
+        <p>{{ password }}</p>
+    </div>
+</div>
