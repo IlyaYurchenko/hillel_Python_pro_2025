@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">       
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<form action="/category/{{category_id}}" method="post">
+    <input type="hidden" id="request_method" name="request_method" value="PATCH"><br>
+    <label for="category_name">Category name:</label><br>
+    <input type="category_name" id="category_name" name="category_name"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<form action="/category/{{category_id}}" method="post">
+    <input type="hidden" id="request_method" name="request_method" value="DELETE"><br>
+    <input type="submit" value="Delete">
+</form>
+</body>
+</html>
