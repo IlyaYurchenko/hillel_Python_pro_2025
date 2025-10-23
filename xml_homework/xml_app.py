@@ -16,9 +16,3 @@ for entry in entries:
     print(f'Title: {title}')
     print(f'Link: {link}')
     print(f'Summary: {summary}')
-
-
-
-file = open('feed.xml').read()
-soup = bs(file, 'lxml-xml')
-
